@@ -1,25 +1,38 @@
+import { Articles } from "./Articles";
+
 export class Categorie {
-    private _id: number;
-    private _nom: string;
+    private id: number;
+    private nom: string;
+    private ls_articles: Articles[];
 
-    constructor(id: number, nom: string) {
-        this._id = id;
-        this._nom = nom;
+    constructor(id: number, nom: string, ls_articles: Articles[]) {
+        this.id = id;
+        this.nom = nom;
+        this.ls_articles = ls_articles;
     }
 
-    get id(): number {
-        return this._id;
+    getId(): number {
+        return this.id;
     }
 
-    set id(value: number) {
-        this._id = value;
+    getNom(): string {
+        return this.nom;
     }
 
-    get nom(): string {
-        return this._nom;
+    setId(id: number) {
+        this.id = id;
     }
 
-    set nom(value: string) {
-        this._nom = value;
+    setNom(nom: string) {
+        this.nom = nom;
     }
+
+    getArticles(): Articles[] {
+        return this.ls_articles;
+    }
+
+    setArticles(ls_articles: Articles[]) {
+        this.ls_articles = ls_articles;
+    }
+
 }

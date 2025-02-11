@@ -1,3 +1,5 @@
+import { Categorie } from "./Categorie";
+
 export class Articles {
   private id: number;
   private nom: string;
@@ -7,8 +9,9 @@ export class Articles {
   private aPropos: string;
   private stock: number;
   private nb_avis: number;
+  private categorie: Categorie;
 
-  constructor(id: number, nom: string, description: string, prix: string, imageUrl: string[], aPropos: string, stock: number, nb_avis: number) {
+  constructor(id: number, nom: string, description: string, prix: string, imageUrl: string[], aPropos: string, stock: number, nb_avis: number, categorie: Categorie) {
     this.id = id;
     this.nom = nom;
     this.description = description;
@@ -17,6 +20,7 @@ export class Articles {
     this.aPropos = aPropos;
     this.stock = stock;
     this.nb_avis = nb_avis;
+    this.categorie = categorie;
   }
 
   getId(): number {
@@ -66,5 +70,13 @@ export class Articles {
   }
   setNb_Avis(nb_avis: number) {
     this.nb_avis = nb_avis;
+  }
+
+  getCategorie(): Categorie {
+    return this.categorie;
+  }
+
+  setCategorie(categorie: Categorie) {
+    this.categorie = categorie;
   }
 }
