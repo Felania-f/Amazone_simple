@@ -8,10 +8,10 @@ export class Panier {
   private prix: number;
   private prix_Total: number;
   private ls_articles: Articles[];
-  private utilisateur: Utilisateurs[];
+  private utilisateur: Utilisateurs;
 
 
-  constructor(article_Id: number, quantité: number, prix: number, prix_Total: number, ls_articles: Articles[], utilisateur: Utilisateurs[]) {
+  constructor(article_Id: number, quantité: number, prix: number, prix_Total: number, ls_articles: Articles[], utilisateur: Utilisateurs) {
     this.article_Id = article_Id;
     this.quantité = quantité;
     this.prix = prix;
@@ -50,8 +50,11 @@ export class Panier {
   setLs_Articles(ls_articles: Articles[]) {
     this.ls_articles = ls_articles;
   }
-  getUtilisateur(): Utilisateurs[] {
+  getUtilisateur(): Utilisateurs {
     return this.utilisateur;
+  }
+  setUtilisateur(utilisateur: Utilisateurs) {
+    this.utilisateur = utilisateur;
   }
 
 }
