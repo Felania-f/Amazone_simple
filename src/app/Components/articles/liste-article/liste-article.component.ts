@@ -18,5 +18,4 @@ export class ListeArticleComponent implements OnInit {
   ngOnInit(): void {
     this.articles = this.articleservice.getArticles();
   }
-
 }
