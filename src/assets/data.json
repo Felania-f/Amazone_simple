@@ -1,0 +1,125 @@
+{
+    "utilisateurs": [
+        {
+            "id": 1,
+            "nom": "Alice",
+            "email": "alice@example.com",
+            "mot_De_Passe": "password123",
+            "localisation": "Paris",
+            "lieu": "France"
+        },
+        {
+            "id": 2,
+            "nom": "Bob",
+            "email": "bob@example.com",
+            "mot_De_Passe": "securePass",
+            "localisation": "Lyon",
+            "lieu": "France"
+        },
+        {
+            "id": 3,
+            "nom": "Charlie",
+            "email": "charlie@example.com",
+            "mot_De_Passe": "pass1234",
+            "localisation": "Marseille",
+            "lieu": "France"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "nom": "Électronique"
+        },
+        {
+            "id": 2,
+            "nom": "Vêtements"
+        },
+        {
+            "id": 3,
+            "nom": "Maison"
+        }
+    ],
+    "articles": [
+        {
+            "id": 1,
+            "nom": "Smartphone",
+            "description": "Un smartphone dernier cri",
+            "prix": "699",
+            "imageUrl": [
+                "img1.jpg"
+            ],
+            "aPropos": "Caractéristiques avancées",
+            "stock": 50,
+            "nb_avis": 120,
+            "categorie": 1
+        },
+        {
+            "id": 2,
+            "nom": "T-shirt",
+            "description": "T-shirt en coton",
+            "prix": "20",
+            "imageUrl": [
+                "img2.jpg"
+            ],
+            "aPropos": "Disponible en plusieurs tailles",
+            "stock": 200,
+            "nb_avis": 45,
+            "categorie": 2
+        },
+        {
+            "id": 3,
+            "nom": "Canapé",
+            "description": "Canapé confortable",
+            "prix": "500",
+            "imageUrl": [
+                "img3.jpg"
+            ],
+            "aPropos": "Tissu premium",
+            "stock": 10,
+            "nb_avis": 30,
+            "categorie": 3
+        }
+    ],
+    "paniers": [
+        {
+            "article_Id": 1,
+            "quantité": 2,
+            "prix": 699,
+            "prix_Total": 1398,
+            "ls_articles": [
+                1
+            ],
+            "utilisateur": 1
+        },
+        {
+            "article_Id": 2,
+            "quantité": 3,
+            "prix": 20,
+            "prix_Total": 60,
+            "ls_articles": [
+                2
+            ],
+            "utilisateur": 2
+        }
+    ],
+    "commandes": [
+        {
+            "id_commande": 1,
+            "utilisateur": 1,
+            "ls_articles": [
+                1
+            ],
+            "prix_total": 1398,
+            "date_commande": "2025-02-12"
+        },
+        {
+            "id_commande": 2,
+            "utilisateur": 2,
+            "ls_articles": [
+                2
+            ],
+            "prix_total": 60,
+            "date_commande": "2025-02-11"
+        }
+    ]
+}

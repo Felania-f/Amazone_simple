@@ -1,0 +1,36 @@
+<div class="container mx-auto flex flex-col items-center min-h-screen">
+    <!-- Image centrée -->
+    <div class="flex justify-center mb-4">
+        <img class="h-48 w-96 object-cover" src="../assets/montains.jpg" />
+    </div>
+
+    <!-- Card centrée -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <div class="px-6 py-4">
+            <div class="font-normal text-4xl mb-2">S'identifier</div>
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+                <div class="mb-2">
+                    <label class="font-bold text-gray-700 text-base" for="mail">
+                        Adresse e-mail ou numéro de téléphone portable
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="mail" type="text" name="mail" required [(ngModel)]="email" required />
+                </div>
+
+                <div class="mb-4">
+                    <label class="font-bold text-gray-700 text-base" for="password">
+                        Mot de passe
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="password" type="password" name="password" required [(ngModel)]="password" required />
+                </div>
+
+
+                <button class="bg-yellow-300 hover:bg-yellow-400 rounded-full w-full" type="submit"
+                    [disabled]="loginForm.invalid">S'identifier</button>
+            </form>
+        </div>
+    </div>
+</div>
