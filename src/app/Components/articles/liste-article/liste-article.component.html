@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
         <div *ngFor="let article of articles" class="overflow-hidden"> 
             <div class="relative">
-                <a href="">
+                <a href="/articles/{{article.id}}">
                     <img class="w-full rounded"
                         [src]="article.imageUrl[0]"
                         width="500" height="500"
@@ -20,8 +20,8 @@
                 Offre à durée illimitée
             </div>
             <div>
-                <a href="#"
-                    class="text-lg inline-block hover:text-orange-300 transition duration-500 ease-in-out">Best
+                <a href="/articles/{{article.id}}"
+                    class="text-lg inline-block hover:text-orange-300 transition duration-500 ease-in-out">
                     {{article.nom}}
                 </a> 
             </div>

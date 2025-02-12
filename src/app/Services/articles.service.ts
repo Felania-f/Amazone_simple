@@ -61,4 +61,13 @@ export class ArticlesService {
   getArticles() {
     return this.articles;
   }
+
+  getArticleById(id: number) {
+    return this.articles.find(article => article.id === id);
+  }
+
+  addArticle(article: any) {
+    this.articles.push(article);
+  }
+  
 }
