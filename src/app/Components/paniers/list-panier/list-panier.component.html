@@ -1,0 +1,26 @@
+<div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+
+  <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
+    <div *ngFor="let panier of paniers" class="overflow-hidden">
+      <div class="relative">
+        <a href="">
+          <img class="w-full rounded" [src]="panier.imageUrl[0]" width="500" height="500" alt="Sunset in the mountains">
+          <div
+            class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+          </div>
+        </a>
+      </div>
+      <div class="mt-2 text-red-500 font-semibold text-lg">
+        <span class="bg-red-600 rounded px-2 py-1 text-stone-50 text-sm mr-1">
+          -33%
+        </span>
+        Offre à durée illimitée
+      </div>
+      <div>
+        <a href="#" class="text-lg inline-block hover:text-orange-300 transition duration-500 ease-in-out">Best
+          {{panier.nom}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
